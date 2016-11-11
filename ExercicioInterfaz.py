@@ -67,9 +67,9 @@ class UserInterface(Gtk.Window):
         grid.add(etiqueta1)
 
         # Posicionanse os compoñentes dentro da pestaña1
-        grid.attach_next_to(text1, etiqueta1, Gtk.PositionType.RIGHT, 1, 2)
-        grid.attach_next_to(etiqueta2, etiqueta1, Gtk.PositionType.BOTTOM, 1, 2)
-        grid.attach_next_to(text2, etiqueta2, Gtk.PositionType.RIGHT, 1, 2)
+        grid.attach_next_to(text1, etiqueta1, Gtk.PositionType.RIGHT, 2, 1)
+        grid.attach_next_to(etiqueta2, etiqueta1, Gtk.PositionType.BOTTOM, 1, 1)
+        grid.attach_next_to(text2, etiqueta2, Gtk.PositionType.RIGHT, 2, 1)
         grid.attach_next_to(etiqueta3, etiqueta2, Gtk.PositionType.BOTTOM, 1, 2)
         grid.attach_next_to(text3, etiqueta3, Gtk.PositionType.RIGHT, 1, 2)
         grid.attach_next_to(etiqueta4, etiqueta3, Gtk.PositionType.BOTTOM, 1, 2)
