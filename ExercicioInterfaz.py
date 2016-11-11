@@ -6,7 +6,7 @@ from gi.repository import Gtk
 # Compoñentes usados: Box, Grid, Entry, CheckButton, ComboBox
 # print(dir(text1.props)) Ver propiedades dos compoñentes
 
-# Creamos unha tupla cos datos que queremos que aparezcan no ComboBox
+# Creamos unha lista cos datos que queremos que aparezcan no ComboBox
 combo = ["Ecoloxista"], \
         ["e"],\
         ["xa"],\
@@ -31,7 +31,7 @@ class UserInterface(Gtk.Window):
         grid = Gtk.Grid()# Crease o Grid para organizar os elementos
 
 
-        # Se crea unha variable tipo ListStore no que se gardara o contido da tupla
+        # Se crea unha variable tipo ListStore no que se gardara o contido da lista
         lista = Gtk.ListStore(str)
         for i in range(len(combo)):
             lista.append(combo[i])
@@ -48,13 +48,13 @@ class UserInterface(Gtk.Window):
         text2 = Gtk.Entry()
         text3 = Gtk.Entry()
 
-        # Crease o ComboBox e mostranse os elementos cargados na lista
+        # Crease o ComboBox e mostranse os elementos cargados no ListStore
         cbox = Gtk.ComboBox(model=lista)
 
         renderer = Gtk.CellRendererText()
         cbox.pack_start(renderer, True)
         cbox.add_attribute(renderer, 'text', 0)
-        cbox.set_active(0) # Inicia o ComboBox na primeira posición da tupla
+        cbox.set_active(0) # Inicia o ComboBox na primeira posición da lista
 
         boton1 = Gtk.Button("Anterior")
         boton2 = Gtk.Button("Seguinte")
